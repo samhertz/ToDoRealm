@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8828EE2E28F5BAD70043964C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828EE2D28F5BAD70043964C /* ListView.swift */; };
+		8828EE3128F5CD480043964C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8828EE3028F5CD480043964C /* README.md */; };
 		88C9AD8728EFB75100F4DB67 /* ToDoRealmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C9AD8628EFB75100F4DB67 /* ToDoRealmApp.swift */; };
 		88C9AD8B28EFB75300F4DB67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C9AD8A28EFB75300F4DB67 /* Assets.xcassets */; };
 		88C9AD8E28EFB75300F4DB67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C9AD8D28EFB75300F4DB67 /* Preview Assets.xcassets */; };
@@ -28,7 +29,8 @@
 
 /* Begin PBXFileReference section */
 		8828EE2D28F5BAD70043964C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		8828EE2F28F5C5430043964C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8828EE2F28F5C5430043964C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8828EE3028F5CD480043964C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		88C9AD8328EFB75100F4DB67 /* Todo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C9AD8628EFB75100F4DB67 /* ToDoRealmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoRealmApp.swift; sourceTree = "<group>"; };
 		88C9AD8A28EFB75300F4DB67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,12 +80,13 @@
 		88C9AD8528EFB75100F4DB67 /* ToDoRealm */ = {
 			isa = PBXGroup;
 			children = (
-				8828EE2F28F5C5430043964C /* Info.plist */,
 				88C9AD8628EFB75100F4DB67 /* ToDoRealmApp.swift */,
+				8828EE3028F5CD480043964C /* README.md */,
 				88C9ADB128F48AF100F4DB67 /* Project */,
 				88C9ADF828F4C89B00F4DB67 /* Models */,
 				88C9ADF728F4C89200F4DB67 /* ViewModels */,
 				88C9ADAE28F48A2600F4DB67 /* Views */,
+				88C9AD8A28EFB75300F4DB67 /* Assets.xcassets */,
 				88C9AD8C28EFB75300F4DB67 /* Preview Content */,
 			);
 			path = ToDoRealm;
@@ -111,9 +114,9 @@
 		88C9ADB128F48AF100F4DB67 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				8828EE2F28F5C5430043964C /* Info.plist */,
 				88C9ADB228F48B0900F4DB67 /* Constants.swift */,
 				88C9ADFD28F4E6CD00F4DB67 /* Extensions */,
-				88C9AD8A28EFB75300F4DB67 /* Assets.xcassets */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			files = (
 				88C9AD8E28EFB75300F4DB67 /* Preview Assets.xcassets in Resources */,
 				88C9AD8B28EFB75300F4DB67 /* Assets.xcassets in Resources */,
+				8828EE3128F5CD480043964C /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
