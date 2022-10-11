@@ -82,6 +82,7 @@
 			children = (
 				88C9AD8628EFB75100F4DB67 /* ToDoRealmApp.swift */,
 				8828EE3028F5CD480043964C /* README.md */,
+				8828EE2F28F5C5430043964C /* Info.plist */,
 				88C9ADB128F48AF100F4DB67 /* Project */,
 				88C9ADF828F4C89B00F4DB67 /* Models */,
 				88C9ADF728F4C89200F4DB67 /* ViewModels */,
@@ -114,7 +115,6 @@
 		88C9ADB128F48AF100F4DB67 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				8828EE2F28F5C5430043964C /* Info.plist */,
 				88C9ADB228F48B0900F4DB67 /* Constants.swift */,
 				88C9ADFD28F4E6CD00F4DB67 /* Extensions */,
 			);
