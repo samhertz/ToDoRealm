@@ -12,9 +12,11 @@ struct AddTaskView: View {
     @ObservedObject var viewModel: TaskViewModel
     @State private var text: String = ""
     @Environment(\.dismiss) var dismiss
+    @FocusState private var textEditorInFocus: Bool
     
     var body: some View {
         TextEditorView(text: $text)
+            .focused($textEditorInFocus)
             .padding()
             .background(Project.Colors.screenBackgroundColor)
             .navigationTitle("Create a New Task")
@@ -26,6 +28,11 @@ struct AddTaskView: View {
                 
                 ToolbarItem(placement: .navigationBarLeading) {
                     navigationBarBackButton
+                }
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    textEditorInFocus = true
                 }
             }
     }

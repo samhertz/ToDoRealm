@@ -14,6 +14,7 @@ struct EditTaskView: View {
     @State private var text: String = ""
     @State private var editable: Bool = false
     @Environment(\.dismiss) var dismiss
+    @FocusState private var textEditorInFocus: Bool
     
     init(viewModel: TaskViewModel, task: TaskObjectModel) {
         self.viewModel = viewModel
@@ -25,28 +26,28 @@ struct EditTaskView: View {
         VStack(spacing: 0) {
             TextEditorView(text: editable ? $text : .constant(text))
                 .textSelection(.enabled)
-                .allowsHitTesting(editable)
+                .focused($textEditorInFocus)
             
             Text("Last Updated: \(task.date.dayAndTimeText)")
                 .frame(maxWidth: .infinity, alignment: .trailing)
         }
-            .padding()
-            .background(Project.Colors.screenBackgroundColor)
-            .navigationTitle(editable ? "Update Task" : "View Task")
-            .navigationBarBackButtonHidden(true)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    navigationBarCompleteButton
-                }
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    navigationBarUpdateButton
-                }
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    navigationBarBackButton
-                }
+        .padding()
+        .background(Project.Colors.screenBackgroundColor)
+        .navigationTitle(editable ? "Update Task" : "View Task")
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                navigationBarCompleteButton
             }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                navigationBarUpdateButton
+            }
+            
+            ToolbarItem(placement: .navigationBarLeading) {
+                navigationBarBackButton
+            }
+        }
     }
     
     private var navigationBarCompleteButton: some View {
@@ -67,6 +68,7 @@ struct EditTaskView: View {
                 viewModel.updateTask(id: task.id, title: text, completed: task.completed, date: Date())
             }
             editable.toggle()
+            textEditorInFocus = true
         } label: {
             Text(editable ? "Update" : "Edit")
                 .padding(Project.Constants.paddingSmall)
